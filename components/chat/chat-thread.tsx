@@ -87,7 +87,8 @@ export function ChatThread({ context, currentUserId, otherUserId, otherUserName 
 
     const optimisticId = `optimistic-${Date.now()}`;
     const optimisticMessage: Message = {
-      id: optimisticId,
+      id: optimisticId, 
+      is_system: false, 
       job_id: context.type === "job" ? context.id : null,
       product_id: context.type === "product" ? context.id : null,
       sender_id: currentUserId,
